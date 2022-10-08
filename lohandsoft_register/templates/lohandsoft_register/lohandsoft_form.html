@@ -1,0 +1,33 @@
+{% extends "lohandsoft_register/base.html" %}
+<!-- 본 페이지가 base.html의 하위문서다라는 걸 맨위에 언급하는것-->
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    {{form.fullname|as_crispy_field}}
+    {{form.birth|as_crispy_field}}
+    <div class="row">
+        <div class="col-md-8">
+            {{form.email|as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+            {{form.age|as_crispy_field}}
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i> 
+                Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'lohandsoft_list' %}" class="btn btn-secondary btn-block btn-lg">
+                <i class="fas fa-stream"></i> Back to list
+            </a> <!--버튼 : a.btn.btn-secondary.btn-block.btn-lg--> <!--아이콘 : i.fas.fa-stream-->
+        </div>
+    </div>
+
+</form>
+
+
+{% endblock content %}
