@@ -1,5 +1,5 @@
 from django import forms
-from .models import lohandsoft
+from .models import lohandsoft, employee_list
 
 class lohandsoftForm(forms.ModelForm):
 
@@ -10,3 +10,13 @@ class lohandsoftForm(forms.ModelForm):
             'fullname':'Full Name',
             'birth':'Birth'
         } 
+
+class employee_listForm(forms.ModelForm):
+
+    class Meta:
+        model = employee_list
+        fields = ('employee_id', 'employee_pass')
+        labels = {
+            'employee_id':'Employee_ID',
+            'employee_pass':'Employee_PASS'
+        }

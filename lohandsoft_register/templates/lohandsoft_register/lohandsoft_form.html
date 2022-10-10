@@ -16,15 +16,26 @@
         </div> 
     </div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-3">
             <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i> 
                 Submit</button>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="{% url 'lohandsoft_list' %}" class="btn btn-secondary btn-block btn-lg">
                 <i class="fas fa-stream"></i> Back to list
             </a> <!--버튼 : a.btn.btn-secondary.btn-block.btn-lg--> <!--아이콘 : i.fas.fa-stream-->
         </div>
+        <div class="col-md-3">
+            <a href="{% url 'signup.html' %}" class="btn btn-lg btn-primary btn-block">
+                 <i></i>sign up
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'lohandsoft_login' %}" class="btn btn-lg btn-primary btn-block">
+                 <i></i>Login
+            </a>
+        </div>
+
     </div>
 
 </form>

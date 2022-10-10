@@ -1,16 +1,17 @@
 {% extends "lohandsoft_register/base.html" %}
 
-{% block contect %}
-    {% if searched %}
-    <h1> 검색하신 {{ lo_filtered }} 회원 정보입니다. </h1>
-    <br>
-        {% for i in lo_filtered %}        
-          <td>{{search.fullname}}</td>
-          <td>{{search.birth}}</td>
-          <td>{{search.email}}</td>
-          <td>{{search.age}}</td>
-        {% endfor %} -->
-    {% else %}      
-    <h1> 검색어를 다시 입력해주세요. </h1>
-  {% endif %}
+{% block content %}
+  <!-- {% if q in qs %}
+          <h1> 검색하신 {{ searched_qs }} 정보 입니다.</h1> -->
+      <br>
+          {% for q in searched_qs %}        
+            <td>{{q.fullname}}</td>
+            <td>{{q.birth}}</td>
+            <td>{{q.email}}</td>
+            <td>{{q.age}}</td>
+          {% endfor %}
+      <br>    
+  <!-- {% else %}
+          <h1> 검색어를 다시 입력해주세요 .</h1>
+  {% endif %} -->
 {% endblock  %}

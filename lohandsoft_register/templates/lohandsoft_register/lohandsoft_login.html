@@ -1,0 +1,23 @@
+{% extends "lohandsoft_register/base.html" %}
+
+
+{% block content %}
+<form class="form-signin" method="POST" action="/login/">
+  <h1 class="h3 mb-3 font-weight-normal">Login page</h1>
+  <label for="inputId" class="sr-only">ID</label>
+  <input type="text" id="userid" name="userid" class="form-control" placeholder="NAME" autofocus="" />
+
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="userpw" name="userpw" class="form-control" placeholder="BIRTH" />
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+</form>
+
+{% endblock content %}
+
+
